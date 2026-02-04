@@ -196,11 +196,11 @@ h3 { font-weight: 600; }
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   #inicio.hero {
     min-height: auto; /* Remove altura de tela cheia */
-    aspect-ratio: 1 / 1; /* Força proporção quadrada */
-    background-position: center center;
+    aspect-ratio: 10 / 7; /* Altura aprox 70% da largura */
+    background-position: center 20%;
     align-items: flex-end;
     padding-bottom: 0;
     text-align: left;
@@ -564,7 +564,7 @@ h3 { font-weight: 600; }
   display: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .hero-content {
     display: none !important;
   }
