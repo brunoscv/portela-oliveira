@@ -571,4 +571,14 @@ h3 { font-weight: 600; }
   .banner-text {
     display: block;
   }
+  .team {
+    grid-template-columns: 1fr;
+  }
+  .team-card img {
+    height: auto !important;
+    aspect-ratio: 10 / 7;
+    object-position: center 20%;
+  }
+  .team-img-andreia { object-position: center 26% !important; }
+  .team-img-sarah { object-position: center 20% !important; }
 }
