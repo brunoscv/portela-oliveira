@@ -1,0 +1,12 @@
+# Claude
+CLAUDE.md
+.claude/
+
+# Ambiente
+.env
+.env.local
+.env*.local
+
+# Sistema
+.DS_Store
+Thumbs.db
