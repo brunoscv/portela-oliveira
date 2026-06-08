@@ -1,0 +1,7 @@
+{
+  "buildCommand": "node scripts/generate-supabase-config.js && cd admin-app && npm install && npm run build",
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/admin/(.*)", "destination": "/admin/index.html" }
+  ]
+}
