@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página não encontrada | Portela & Oliveira Advocacia</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='70' font-size='80'>⚖️</text></svg>">
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1.5rem;
+      padding: 2rem 1.5rem;
+      background: var(--secondary);
+      color: #fff;
+    }
+    .error-page .logo-img { height: 64px; margin-bottom: .5rem; }
+    .error-page .error-code {
+      font-family: "Lora", Georgia, serif;
+      font-weight: 700;
+      font-size: 4rem;
+      color: var(--primary);
+      line-height: 1;
+    }
+    .error-page h1 { margin: 0; font-size: 1.5rem; }
+    .error-page p { max-width: 32rem; opacity: .85; }
+  </style>
+</head>
+<body>
+  <main class="error-page">
+    <a href="/" aria-label="Ir para início">
+      <img class="logo-img" src="utils/logo.png" alt="Portela & Oliveira Advocacia">
+    </a>
+    <span class="error-code">404</span>
+    <h1>Página não encontrada</h1>
+    <p>O endereço que você tentou acessar não existe ou foi movido. Que tal voltar para o início e continuar navegando pelo nosso site?</p>
+    <a class="btn btn-primary" href="/">Voltar para o início</a>
+  </main>
+</body>
+</html>

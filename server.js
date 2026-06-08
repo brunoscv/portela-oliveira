@@ -24,8 +24,10 @@ const server = http.createServer((req, res) => {
   }
   fs.stat(filePath, (err, stat) => {
     if (err || !stat.isFile()) {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('Not Found');
+      fs.readFile(path.join(root, '404.html'), (err404, data) => {
+        res.writeHead(404, { 'Content-Type': err404 ? 'text/plain' : 'text/html; charset=utf-8' });
+        res.end(err404 ? 'Not Found' : data);
+      });
       return;
     }
     const ext = path.extname(filePath).toLowerCase();
