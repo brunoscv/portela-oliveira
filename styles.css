@@ -196,13 +196,14 @@ h3 { font-weight: 600; }
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   #inicio.hero {
-    min-height: 100vh; /* Tela cheia no mobile */
-    background-position: center center;
-    align-items: flex-end; /* Texto embaixo */
-    padding-bottom: 6rem;
-    text-align: left; /* Mantém alinhamento a esquerda */
+    min-height: auto; /* Remove altura de tela cheia */
+    aspect-ratio: 10 / 7; /* Altura aprox 70% da largura */
+    background-position: center 20%;
+    align-items: flex-end;
+    padding-bottom: 0;
+    text-align: left;
   }
   
   #inicio.hero::before {
@@ -237,6 +238,16 @@ h3 { font-weight: 600; }
 
 .btn-secondary { background: var(--secondary); color: #fff; }
 .btn-secondary:hover { background: #bb7d46; }
+
+.banner-text-hero {
+  background: linear-gradient(135deg, #f8ede2 0%, #fff 100%); /* imagem/tons bege suaves */
+}
+.banner-text-hero::before {
+  content: ""; position: absolute; inset: 0; background: rgba(255,255,255,0.6); /* overlay branco translúcido */
+  pointer-events: none;
+}
+.banner-text-content { position: relative; z-index: 1; max-width: 800px; text-align: center; }
+
 /* Quem Somos hero sobreposto */
 .quem-somos-hero {
   background: linear-gradient(135deg, #f8ede2 0%, #fff 100%); /* imagem/tons bege suaves */
@@ -246,6 +257,7 @@ h3 { font-weight: 600; }
   pointer-events: none;
 }
 .quem-somos-content { position: relative; z-index: 1; max-width: 800px; text-align: center; }
+
 
 /* Cards de serviços (estilo olive com ícones) */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
@@ -546,3 +558,27 @@ h3 { font-weight: 600; }
     align-items: center;
     gap: 0.3rem;
   }
+
+
+.banner-text {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    display: none !important;
+  }
+  .banner-text {
+    display: block;
+  }
+  .team {
+    grid-template-columns: 1fr;
+  }
+  .team-card img {
+    height: auto !important;
+    aspect-ratio: 10 / 7;
+    object-position: center 20%;
+  }
+  .team-img-andreia { object-position: center 26% !important; }
+  .team-img-sarah { object-position: center 20% !important; }
+}

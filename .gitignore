@@ -1,0 +1,21 @@
+# Claude
+CLAUDE.md
+.claude/
+
+# Supabase config gerado (contém credenciais)
+supabase-config.js
+
+# Ambiente
+.env
+.env.local
+.env*.local
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Build do admin React (gerado pelo Netlify)
+admin/
+
+# Node
+admin-app/node_modules/

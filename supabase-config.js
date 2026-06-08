@@ -1,10 +1,8 @@
 
-// Configuração do Supabase
-// VOCÊ PRECISA SUBSTITUIR ESSAS CHAVES PELAS SUAS DO SUPABASE DASHBOARD
-const SUPABASE_URL = 'SUPABASE_URL_PLACEHOLDER';
-const SUPABASE_KEY = 'SUPABASE_ANON_KEY_PLACEHOLDER';
+// Gerado automaticamente — não editar manualmente
+const SUPABASE_URL = 'https://ojpybmecisnksdemcyiz.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9qcHlibWVjaXNua3NkZW1jeWl6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA4MDE5NTcsImV4cCI6MjA5NjM3Nzk1N30.l4K29O_HvxWOasVMhjV29t5ospMKpqEecIDIMn7-HsA';
 
-// Inicializa o cliente apenas se a biblioteca estiver carregada
 let supabaseClient;
 if (typeof createClient !== 'undefined') {
   supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -12,5 +10,4 @@ if (typeof createClient !== 'undefined') {
   supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 }
 
-// Garante que esteja acessível globalmente
 window.supabaseClient = supabaseClient;

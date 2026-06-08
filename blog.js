@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Preencher Conteúdo
         document.getElementById('noticia-titulo').textContent = post.title;
-        document.getElementById('noticia-texto').textContent = post.content;
+        document.getElementById('noticia-texto').innerHTML = post.content;
         
         const date = new Date(post.created_at).toLocaleDateString('pt-BR', {
           day: 'numeric', month: 'long', year: 'numeric'
