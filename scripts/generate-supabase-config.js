@@ -2,10 +2,10 @@ const fs = require('fs')
 const path = require('path')
 
 const url = process.env.SUPABASE_URL
-const key = process.env.SUPABASE_ANON_KEY
+const key = process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_KEY
 
 if (!url || !key) {
-  console.error('Erro: SUPABASE_URL e SUPABASE_ANON_KEY são obrigatórias.')
+  console.error('Erro: SUPABASE_URL e SUPABASE_ANON_KEY (ou SUPABASE_KEY) são obrigatórias.')
   process.exit(1)
 }
 
